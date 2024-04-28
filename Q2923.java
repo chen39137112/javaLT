@@ -3,7 +3,15 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-class Solution {
+
+public class Q2923 {
+    public static void main(String[] args) {
+        Q2923 s = new Q2923();
+        int[][] grid = {{0, 0, 1}, {1, 0, 1}, {0, 0, 0}};
+        int ret = s.findChampion(grid);
+        System.out.println(1);
+    }
+
     private static void dfs(Map<Integer, List<Integer>> hashMap, int key) {
         List<Integer> teams = hashMap.getOrDefault(key, null);
         if (teams == null) {
@@ -45,14 +53,5 @@ class Solution {
             return -1;
         }
         return -1;
-    }
-}
-
-public class Q2923 {
-    public static void main(String[] args) {
-        Solution s = new Solution();
-        int[][] grid = {{0,0,1},{1,0,1},{0,0,0}};
-        int ret = s.findChampion(grid);
-        System.out.println(1);
     }
 }
